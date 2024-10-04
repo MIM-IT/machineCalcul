@@ -3,8 +3,12 @@ Le développement de <b>la machine de calcul</b> a été réalisé en collaborat
 L'enjeu était de réalisé une machine de calcul (calculatrice), que l'on peut trouver sur son pc, télèphone etc. 
 Le projet nous a occupé durant une journée.
 <h1> La belle calculette </h1>
-![Capture d'écran 2024-10-04 105359](https://github.com/user-attachments/assets/eab011cd-363b-4436-9c90-5d580f7d8da7)
-<h2>Parlons "technique"</h2>
+![calcul](https://github.com/user-attachments/assets/fe3da021-14ac-4575-a3bb-bb97b50096c0)
+
+
+
+
+<h2>Parlons technique</h2>
 
 
 Construit avec JavaScript, stylisé avec CSS et Bootstrap. 
