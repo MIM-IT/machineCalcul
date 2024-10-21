@@ -4,8 +4,9 @@ let suppr = document.getElementById("suppr");
 let screen = document.getElementById("screen");
 let reset = document.getElementById("reset");
 let nombreUn = 0;
-let nombreDeux =0;
-let operateur = document.querySelectorAll("[data-num]"); 
+let nombreDeux = 0;
+let res = 0;
+let operateur = document.querySelectorAll("[data-num]"); // on nome le groupe de sélecteur [data-num]-->operateur
 console.log(operateur);
 
 // initiation des spécials boutons 
@@ -32,7 +33,7 @@ entree.addEventListener("click",function(){
 
 const division = document.getElementById("division"); 
 division.addEventListener("click",function(){
-    operateur = division.dataset.num;
+    operateur = division.dataset.num; // on implémente l'opérateur division depuis le selecteur data-num (on reprend le chemin)
     nombreUn = parseFloat(document.getElementById("screen").value); 
     myDisplay("/");
     myReset();
@@ -63,6 +64,11 @@ addition.addEventListener("click", function () {
     myDisplay("+");
     myReset();
 });
+const pts = document.getElementById("pts");
+pts.addEventListener("click", function () {
+    myDisplay(".");
+});
+
 
 // *******init des chiffres
 const neuf = document.getElementById("neuf");
@@ -111,12 +117,8 @@ const zero = document.getElementById("zero");
 zero.addEventListener("click", function () {
     myDisplay(0)
 });
-const pts = document.getElementById("pts");
-pts.addEventListener("click", function () {
-    myDisplay(".");
-});
 
-
+/********Les Fonctions************** */
 function myDisplay(valeur){
     screen.value += valeur; 
 }
@@ -128,7 +130,7 @@ function myReset(){
 function supprLastCar() {
     screen.value = screen.value.slice(0,-1); 
 }
-let res;
+
 console.log(nombreUn); 
 console.log(nombreDeux);
 
@@ -139,23 +141,23 @@ function monResultat(){
         case "*":
             res = nombreUn * nombreDeux;
             screen.value = res; 
-            myDisplay(res);
+            //myDisplay(res);
             break;
         case "+":
             res = nombreUn + nombreDeux;
             screen.value = res; 
             console.log(res);
-            myDisplay(res);
+            //myDisplay(res);
             break;
         case "-":
             res = nombreUn - nombreDeux;
             screen.value = res; 
-            myDisplay(res);
+            //myDisplay(res);
             break;
         case "/":
             res = nombreUn / nombreDeux;
             screen.value = res;
-            myDisplay(res); 
+            //myDisplay(res); 
             break;
     }
 }
